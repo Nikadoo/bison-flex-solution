@@ -1,0 +1,53 @@
+﻿  Generating lexical analyzer
+  Generating syntax parser
+  parser.y:170.11-27: warning: type clash on default action: <num> != <> [-Wother]
+   	| '(' bool_expr ')'
+             ^^^^^^^^^^^^^^^^^
+  parser.y:188.17-36: warning: type clash on default action: <num> != <> [-Wother]
+   simple_instr :  assign_stat_num '\n'
+                   ^^^^^^^^^^^^^^^^^^^^
+  parser.y:189.11-30: warning: type clash on default action: <num> != <> [-Wother]
+   	| assign_stat_str '\n'
+             ^^^^^^^^^^^^^^^^^^^^
+parser.y : warning : 1 nonterminal useless in grammar [-Wother]
+parser.y : warning : 2 rules useless in grammar [-Wother]
+  parser.y:217.1-10: warning: nonterminal useless in grammar: while_stat [-Wother]
+   while_stat : WHILE bool_expr DO simple_instr 
+   ^^^^^^^^^^
+  parser.y:217.14-44: warning: rule useless in grammar [-Wother]
+   while_stat : WHILE bool_expr DO simple_instr 
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  parser.y:218.11-41: warning: rule useless in grammar [-Wother]
+   	| DO simple_instr WHILE bool_expr
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parser.y : warning : 4 shift/reduce conflicts [-Wconflicts-sr]
+parser.y : warning : 6 reduce/reduce conflicts [-Wconflicts-rr]
+  lexer.cpp
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(398,1): warning C4005: "yywrap": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(74): message : zobacz poprzednią definicję „yywrap”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(49,1): warning C4005: "INT8_MIN": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(137): message : zobacz poprzednią definicję „INT8_MIN”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(50,1): warning C4005: "INT16_MIN": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(140): message : zobacz poprzednią definicję „INT16_MIN”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(51,1): warning C4005: "INT32_MIN": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(143): message : zobacz poprzednią definicję „INT32_MIN”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(53,1): warning C4005: "INT8_MAX": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(146): message : zobacz poprzednią definicję „INT8_MAX”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(54,1): warning C4005: "INT16_MAX": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(149): message : zobacz poprzednią definicję „INT16_MAX”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(55,1): warning C4005: "INT32_MAX": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(152): message : zobacz poprzednią definicję „INT32_MAX”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(57,1): warning C4005: "UINT8_MAX": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(155): message : zobacz poprzednią definicję „UINT8_MAX”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(58,1): warning C4005: "UINT16_MAX": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(158): message : zobacz poprzednią definicję „UINT16_MAX”
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include\stdint.h(59,1): warning C4005: "UINT32_MAX": ponowna definicja makra
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\lexer.cpp(161): message : zobacz poprzednią definicję „UINT32_MAX”
+  parser.cpp
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\parser.y(194,13): warning C4477: „printf”: ciąg formatu „%d” wymaga argumentu typu „int”, ale argument 1 ze zmienną liczbą argumentów ma typ „size_t”
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\parser.y(194,13): message : rozważ użycie elementu „%zd” w ciągu formatu
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\parser.y(195,100): warning C4477: „printf”: ciąg formatu „%d” wymaga argumentu typu „int”, ale argument 1 ze zmienną liczbą argumentów ma typ „unsigned __int64”
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\parser.y(195,100): message : rozważ użycie elementu „%zd” w ciągu formatu
+C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\HelloWinBisonFlexSolution\parser.y(198,148): warning C4477: „printf”: ciąg formatu „%s” wymaga argumentu typu „char *”, ale argument 1 ze zmienną liczbą argumentów ma typ „std::string”
+  Generowanie kodu...
+  HelloWinBisonFlexSolution.vcxproj -> C:\Users\domlu\source\repos\HelloWinBisonFlexSolution\x64\Debug\HelloWinBisonFlexSolution.exe
